@@ -1,13 +1,14 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Github, Twitter, Linkedin, Mail, ArrowUp } from "lucide-react";
+import Link from "next/link";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Mail, href: "#", label: "Email" },
+  { icon: Github, href: "/under-construction", label: "GitHub" },
+  { icon: Twitter, href: "/under-construction", label: "Twitter" },
+  { icon: Linkedin, href: "/under-construction", label: "LinkedIn" },
+  // Only the mail icon is a real mailto link:
+  { icon: Mail, href: "mailto:contact@bluverseinfobit.com", label: "Email" },
 ];
 
 const footerLinks = {
@@ -17,7 +18,12 @@ const footerLinks = {
     "Cybersecurity",
     "Mobile Apps",
   ],
-  Company: ["About Us", "Careers", "Contact", "Blog"],
+  Company: [
+    { label: "About Us", href: "#about" },
+    { label: "Careers", href: "/under-construction" },
+    { label: "Contact", href: "#contact" },
+    { label: "Blog", href: "/under-construction" },
+  ],
   Resources: ["Documentation", "Support", "Privacy Policy", "Terms of Service"],
 };
 
@@ -29,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative py-20 bg-background/95 backdrop-blur-xl border-t border-border/50">
+    <footer className="relative py-20 bg-background/95 backdrop-blur-xl">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Brand Section */}
@@ -40,9 +46,16 @@ export default function Footer() {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold gradient-text">
-              Bluverse Infobit
-            </h3>
+            <Link href="/" className="inline-flex items-center space-x-2">
+              <img
+                src="/assets/logo-wbg.png"
+                alt="Bluverse Logo"
+                className="h-10 w-10 object-contain"
+              />
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text cursor-pointer">
+                Bluverse Infobit
+              </span>
+            </Link>
             <p className="text-muted-foreground leading-relaxed">
               Transforming businesses through innovative technology solutions.
               Your digital future starts here.
@@ -52,7 +65,8 @@ export default function Footer() {
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
-                return (
+                // For the mail, use a real anchor. For others, use Link.
+                return social.label === "Email" ? (
                   <motion.a
                     key={social.label}
                     href={social.href}
@@ -63,9 +77,20 @@ export default function Footer() {
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     aria-label={social.label}
                     className="w-10 h-10 glass rounded-lg flex items-center justify-center hover:glow-primary transition-all duration-300 group"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <IconComponent className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </motion.a>
+                ) : (
+                  <Link
+                    key={social.label}
+                    href={social.href}
+                    aria-label={social.label}
+                    className="w-10 h-10 glass rounded-lg flex items-center justify-center hover:glow-primary transition-all duration-300 group"
+                  >
+                    <IconComponent className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                  </Link>
                 );
               })}
             </div>
@@ -83,25 +108,35 @@ export default function Footer() {
             >
               <h4 className="font-semibold text-primary">{category}</h4>
               <ul className="space-y-3">
-                {links.map((link, linkIndex) => (
-                  <motion.li
-                    key={link}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{
-                      delay: (columnIndex + 1) * 0.1 + linkIndex * 0.05,
-                      duration: 0.4,
-                    }}
-                  >
-                    <a
-                      href="#"
-                      className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:underline"
+                {links.map((link, linkIndex) => {
+                  // If link is an object with label/href, use its values; else fallback
+                  const linkLabel =
+                    typeof link === "string" ? link : link.label;
+                  const linkHref =
+                    typeof link === "string"
+                      ? "/under-construction"
+                      : link.href;
+
+                  return (
+                    <motion.li
+                      key={linkLabel}
+                      initial={{ opacity: 0, x: -10 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        delay: (columnIndex + 1) * 0.1 + linkIndex * 0.05,
+                        duration: 0.4,
+                      }}
                     >
-                      {link}
-                    </a>
-                  </motion.li>
-                ))}
+                      <Link
+                        href={linkHref}
+                        className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:underline"
+                      >
+                        {linkLabel}
+                      </Link>
+                    </motion.li>
+                  );
+                })}
               </ul>
             </motion.div>
           ))}

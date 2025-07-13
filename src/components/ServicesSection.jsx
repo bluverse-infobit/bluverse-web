@@ -1,157 +1,6 @@
-// import React from "react";
-// import { motion } from "framer-motion";
-// import { Cloud, Code, Shield, Smartphone, Database, Cpu } from "lucide-react";
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardHeader,
-//   CardTitle,
-// } from "@/components/ui/card";
-
-// const services = [
-//   {
-//     icon: Cloud,
-//     title: "Cloud Solutions",
-//     description:
-//       "Scalable cloud infrastructure that grows with your business needs.",
-//     features: ["AWS & Azure", "Auto-scaling", "24/7 Monitoring"],
-//     color: "from-blue-500 to-cyan-500",
-//   },
-//   {
-//     icon: Code,
-//     title: "Custom Development",
-//     description:
-//       "Bespoke software solutions tailored to your unique requirements.",
-//     features: [
-//       "Full-stack Development",
-//       "API Integration",
-//       "Modern Frameworks",
-//     ],
-//     color: "from-purple-500 to-pink-500",
-//   },
-//   {
-//     icon: Shield,
-//     title: "Cybersecurity",
-//     description:
-//       "Comprehensive security solutions to protect your digital assets.",
-//     features: ["Threat Assessment", "Data Protection", "Compliance"],
-//     color: "from-green-500 to-emerald-500",
-//   },
-//   {
-//     icon: Smartphone,
-//     title: "Mobile Apps",
-//     description:
-//       "Native and cross-platform mobile applications for all devices.",
-//     features: ["iOS & Android", "React Native", "Progressive Web Apps"],
-//     color: "from-orange-500 to-red-500",
-//   },
-//   {
-//     icon: Database,
-//     title: "Data Analytics",
-//     description: "Transform raw data into actionable business insights.",
-//     features: ["Big Data Processing", "ML & AI", "Real-time Analytics"],
-//     color: "from-indigo-500 to-purple-500",
-//   },
-//   {
-//     icon: Cpu,
-//     title: "AI Integration",
-//     description: "Harness artificial intelligence to automate and optimize.",
-//     features: [
-//       "Machine Learning",
-//       "Natural Language Processing",
-//       "Computer Vision",
-//     ],
-//     color: "from-cyan-500 to-blue-500",
-//   },
-// ];
-
-// export default function ServicesSection() {
-//   return (
-//     <section id="services" className="py-20 relative">
-//       <div className="container mx-auto px-4">
-//         <motion.div
-//           initial={{ opacity: 0, y: 30 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           viewport={{ once: true }}
-//           transition={{ duration: 0.8 }}
-//           className="text-center mb-16"
-//         >
-//           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-//             Our <span className="gradient-text">Services</span>
-//           </h2>
-//           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-//             From cloud infrastructure to AI integration, we provide
-//             comprehensive technology solutions that drive innovation and growth.
-//           </p>
-//         </motion.div>
-
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {services.map((service, index) => {
-//             const IconComponent = service.icon;
-//             return (
-//               <motion.div
-//                 key={service.title}
-//                 initial={{ opacity: 0, y: 30 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 viewport={{ once: true }}
-//                 transition={{ delay: index * 0.1, duration: 0.8 }}
-//                 whileHover={{ y: -10 }}
-//                 className="group"
-//               >
-//                 <Card className="glass h-full border-0 hover:glow-primary transition-all duration-500 group-hover:border-primary/50">
-//                   <CardHeader>
-//                     <motion.div
-//                       whileHover={{ scale: 1.1, rotate: 5 }}
-//                       transition={{
-//                         type: "spring",
-//                         stiffness: 300,
-//                         damping: 20,
-//                       }}
-//                       className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} p-3 mb-4`}
-//                     >
-//                       <IconComponent className="w-full h-full text-white" />
-//                     </motion.div>
-//                     <CardTitle className="text-xl group-hover:text-primary transition-colors">
-//                       {service.title}
-//                     </CardTitle>
-//                     <CardDescription className="text-muted-foreground">
-//                       {service.description}
-//                     </CardDescription>
-//                   </CardHeader>
-//                   <CardContent>
-//                     <ul className="space-y-2">
-//                       {service.features.map((feature, featureIndex) => (
-//                         <motion.li
-//                           key={feature}
-//                           initial={{ opacity: 0, x: -20 }}
-//                           whileInView={{ opacity: 1, x: 0 }}
-//                           viewport={{ once: true }}
-//                           transition={{
-//                             delay: index * 0.1 + featureIndex * 0.05,
-//                             duration: 0.5,
-//                           }}
-//                           className="flex items-center text-sm text-muted-foreground"
-//                         >
-//                           <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3" />
-//                           {feature}
-//                         </motion.li>
-//                       ))}
-//                     </ul>
-//                   </CardContent>
-//                 </Card>
-//               </motion.div>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 "use client";
 
 import { motion } from "framer-motion";
-// Import your Card, CardHeader, etc. from your UI library
 import {
   Card,
   CardHeader,
@@ -162,130 +11,165 @@ import {
 
 const services = [
   {
-    title: "Cloud Solutions",
+    title: "UK Outbound Sales Strategy",
     icon: (
       <svg
-        /* ...icon props... */ className="w-full h-full text-white"
-        viewBox="0 0 24 24"
+        className="w-full h-full text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}
+        viewBox="0 0 24 24"
       >
-        <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+        <path d="M3 7l6 6-6 6" />
+        <path d="M9 19h11v-6M9 5h11v6" />
       </svg>
     ),
     iconClass: "bg-gradient-to-r from-blue-500 to-cyan-500",
     description:
-      "Scalable cloud infrastructure that grows with your business needs.",
-    features: ["AWS & Azure", "Auto-scaling", "24/7 Monitoring"],
-  },
-  {
-    title: "Custom Development",
-    icon: (
-      <svg
-        /* ...icon props... */ className="w-full h-full text-white"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-      </svg>
-    ),
-    iconClass: "bg-gradient-to-r from-purple-500 to-pink-500",
-    description:
-      "Bespoke software solutions tailored to your unique requirements.",
+      "Authentic connections & tailored outreach to accelerate your UK market entry and pipeline growth.",
     features: [
-      "Full-stack Development",
-      "API Integration",
-      "Modern Frameworks",
+      "Market Intelligence & ICP Research",
+      "Personalized Multichannel Outreach",
+      "Performance Analytics & Human Insights",
     ],
   },
   {
-    title: "Cybersecurity",
+    title: "Cybersecurity Consulting & IT Services",
     icon: (
       <svg
-        /* ...icon props... */ className="w-full h-full text-white"
-        viewBox="0 0 24 24"
+        className="w-full h-full text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}
+        viewBox="0 0 24 24"
       >
-        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+        <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
       </svg>
     ),
     iconClass: "bg-gradient-to-r from-green-500 to-emerald-500",
     description:
-      "Comprehensive security solutions to protect your digital assets.",
-    features: ["Threat Assessment", "Data Protection", "Compliance"],
+      "Peace-of-mind cybersecurity and IT consulting. We secure, optimize, and future-proof your operations.",
+    features: [
+      "Enterprise Risk Assessment",
+      "Penetration Testing & Cloud Hardening",
+      "Compliance Advisory & DevSecOps",
+    ],
   },
   {
-    title: "Mobile Apps",
+    title: "Managed Security Services (MSSP)",
     icon: (
       <svg
-        /* ...icon props... */ className="w-full h-full text-white"
-        viewBox="0 0 24 24"
+        className="w-full h-full text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}
+        viewBox="0 0 24 24"
       >
-        <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
-        <path d="M12 18h.01"></path>
+        <circle cx="12" cy="12" r="10" />
+        <path d="M8 12l2 2 4-4" />
       </svg>
     ),
-    iconClass: "bg-gradient-to-r from-orange-500 to-red-500",
+    iconClass: "bg-gradient-to-r from-cyan-600 to-blue-500",
     description:
-      "Native and cross-platform mobile applications for all devices.",
-    features: ["iOS & Android", "React Native", "Progressive Web Apps"],
+      "Always-on vigilance: 24/7 SOC, threat hunting, and incident response by certified analysts.",
+    features: [
+      "Human-Powered SOC",
+      "Proactive Threat Hunting",
+      "Vulnerability Management & Response",
+    ],
   },
   {
-    title: "Data Analytics",
+    title: "Cybersecurity Training & Awareness",
     icon: (
       <svg
-        /* ...icon props... */ className="w-full h-full text-white"
-        viewBox="0 0 24 24"
+        className="w-full h-full text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}
+        viewBox="0 0 24 24"
       >
-        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-        <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
-        <path d="M3 12A9 3 0 0 0 21 12"></path>
+        <rect x="2" y="7" width="20" height="14" rx="2" />
+        <path d="M16 3v4M8 3v4" />
+      </svg>
+    ),
+    iconClass: "bg-gradient-to-r from-yellow-500 to-orange-500",
+    description:
+      "Transforming behaviour, reducing risk. Empower your staff to be your strongest cyber defence.",
+    features: [
+      "Role-based, Interactive Training",
+      "Phishing Simulations & E-learning",
+      "Behavioural Metrics & Certification Prep",
+    ],
+  },
+  {
+    title: "SaaS Security Solutions Reselling",
+    icon: (
+      <svg
+        className="w-full h-full text-white"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        viewBox="0 0 24 24"
+      >
+        <rect width="18" height="14" x="3" y="7" rx="2" />
+        <path d="M7 7V3h10v4" />
       </svg>
     ),
     iconClass: "bg-gradient-to-r from-indigo-500 to-purple-500",
-    description: "Transform raw data into actionable business insights.",
-    features: ["Big Data Processing", "ML & AI", "Real-time Analytics"],
+    description:
+      "Strategic SaaS security tool selection, seamless deployment, and ongoing optimization.",
+    features: [
+      "Technology Fit Assessment",
+      "Unified Procurement & Implementation",
+      "License Optimization & Health Checks",
+    ],
   },
   {
-    title: "AI Integration",
+    title: "BPO & Outsourcing",
     icon: (
       <svg
-        /* ...icon props... */ className="w-full h-full text-white"
-        viewBox="0 0 24 24"
+        className="w-full h-full text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth={2}
+        viewBox="0 0 24 24"
       >
-        <rect width="16" height="16" x="4" y="4" rx="2"></rect>
-        <rect width="6" height="6" x="9" y="9" rx="1"></rect>
-        <path d="M15 2v2"></path>
-        <path d="M15 20v2"></path>
-        <path d="M2 15h2"></path>
-        <path d="M2 9h2"></path>
-        <path d="M20 15h2"></path>
-        <path d="M20 9h2"></path>
-        <path d="M9 2v2"></path>
-        <path d="M9 20v2"></path>
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <circle cx="19" cy="7" r="4" />
       </svg>
     ),
-    iconClass: "bg-gradient-to-r from-cyan-500 to-blue-500",
-    description: "Harness artificial intelligence to automate and optimize.",
+    iconClass: "bg-gradient-to-r from-pink-500 to-red-500",
+    description:
+      "Human-centric BPO for operational efficiency and superior customer & tech support experiences.",
     features: [
-      "Machine Learning",
-      "Natural Language Processing",
-      "Computer Vision",
+      "Customer Experience & Support Desk",
+      "Back-Office Operations & Automation",
+      "Hybrid Delivery & Scalability",
+    ],
+  },
+  {
+    title: "Web, App & Custom Software Development",
+    icon: (
+      <svg
+        className="w-full h-full text-white"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        viewBox="0 0 24 24"
+      >
+        <rect width="20" height="14" x="2" y="5" rx="2" />
+        <path d="M8 7v10M16 7v10" />
+      </svg>
+    ),
+    iconClass: "bg-gradient-to-r from-purple-600 to-blue-500",
+    description:
+      "Custom web, mobile, and software development to digitally empower your business.",
+    features: [
+      "Full-Stack Web & Mobile Apps",
+      "API Integrations & Modern Frameworks",
+      "Cloud-Native, Secure by Design",
     ],
   },
 ];
@@ -304,8 +188,9 @@ export default function ServicesSection() {
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From cloud infrastructure to AI integration, we provide
-            comprehensive technology solutions that drive innovation and growth.
+            Secure, strategic, and human-centric solutions—empowering your
+            business through cybersecurity, sales strategy, SaaS, BPO, and
+            custom digital development.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -318,7 +203,7 @@ export default function ServicesSection() {
               transition={{ delay: idx * 0.1, duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Card className="glass h-full border-0 hover:glow-primary transition-all duration-500 group-hover:border-primary/50">
+              <Card className="bg-service-card h-full border-0 hover:glow-primary transition-all duration-500 group-hover:border-primary/50">
                 <CardHeader className="flex flex-col space-y-1.5 p-6">
                   <motion.div
                     className={`w-12 h-12 rounded-lg ${service.iconClass} p-3 mb-4`}
@@ -333,7 +218,7 @@ export default function ServicesSection() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-6 pt-0">
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 list-none">
                     {service.features.map((feature, i) => (
                       <motion.li
                         key={feature}
@@ -343,7 +228,7 @@ export default function ServicesSection() {
                         transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
                         viewport={{ once: true }}
                       >
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3" />
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3" />
                         {feature}
                       </motion.li>
                     ))}

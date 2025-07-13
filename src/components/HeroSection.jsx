@@ -1,22 +1,21 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, Database, Shield } from "lucide-react";
+import { ArrowRight, ShieldCheck, Globe2, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollIndicator } from "./ScrollIndicator";
-
-console.log("HeroSection imports successful");
+import { TechLoader } from "./TechLoader";
 
 const features = [
-  { icon: Cpu, text: "AI-Powered Solutions" },
-  { icon: Database, text: "Cloud Infrastructure" },
-  { icon: Shield, text: "Cybersecurity" },
+  { icon: ShieldCheck, text: "24x7 Cyber Defence" },
+  { icon: Globe2, text: "UK Market Entry Experts" },
+  { icon: Users, text: "Certified Global Team" },
 ];
 
 export default function HeroSection() {
-  console.log("HeroSection component rendering...");
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pb-8">
       {/* Background with gradient */}
       <div className="absolute inset-0 gradient-hero" />
 
@@ -26,11 +25,6 @@ export default function HeroSection() {
         style={{ backgroundImage: "url('/assets/hero-tech.jpg')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/30 to-background/50" />
-
-      {/* 3D Scene Background - REMOVED FOR DEBUGGING */}
-      {/* <div className="absolute inset-0 opacity-60">
-        <Scene3D />
-      </div> */}
 
       <div className="relative container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -47,11 +41,11 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="gradient-text">Transform</span>
+                <span className="gradient-text">Secure</span>
                 <br />
-                Your Digital
+                Digital Excellence
                 <br />
-                <span className="text-accent">Future</span>
+                <span className="text-accent">by Bluverse</span>
               </h1>
             </motion.div>
 
@@ -61,9 +55,10 @@ export default function HeroSection() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl text-muted-foreground leading-relaxed max-w-lg"
             >
-              Unleash the power of cutting-edge technology with our innovative
-              IT solutions. We craft digital experiences that drive growth and
-              revolutionize your business.
+              Transform your business through cyber-resilient strategy, UK & Global
+              market expertise, and scalable SaaS & BPO. We embed security at
+              every layer, delivering operational resilience and measurable
+              growth in a digitally connected world.
             </motion.p>
 
             <motion.div
@@ -72,20 +67,16 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4"
             >
-              <Button
-                size="lg"
-                className="gradient-primary glow-primary hover:glow-accent transition-all duration-300 group"
-              >
-                Start Your Journey
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="glass hover:bg-primary/10 transition-all duration-300"
-              >
-                Watch Demo
-              </Button>
+              <Link href="#contact">
+                <Button
+                  size="lg"
+                  className="gradient-primary glow-primary hover:glow-accent transition-all duration-300 group"
+                >
+                  Schedule Cyber Assessment
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+              {/* You can add back "Watch Demo" here if needed */}
             </motion.div>
 
             {/* Feature Icons */}
@@ -121,45 +112,27 @@ export default function HeroSection() {
             className="relative"
           >
             <div className="relative h-96 lg:h-[500px] glass rounded-2xl overflow-hidden glow-primary">
-              {/* 3D Scene removed for debugging */}
+              {/* 3D Scene / Loader */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <div className="text-4xl font-bold gradient-text">3D Scene</div>
+                <TechLoader />
               </div>
-
               {/* Floating Stats */}
               <motion.div className="absolute top-4 right-4 glass px-4 py-2 rounded-lg">
-                <div className="text-2xl font-bold gradient-text">99.9%</div>
-                <div className="text-xs text-muted-foreground">Uptime</div>
+                <div className="text-2xl font-bold gradient-text">24x7</div>
+                <div className="text-xs text-muted-foreground">
+                  Cyber Protection
+                </div>
               </motion.div>
-
               <motion.div className="absolute bottom-4 left-4 glass px-4 py-2 rounded-lg">
-                <div className="text-2xl font-bold gradient-text">500+</div>
-                <div className="text-xs text-muted-foreground">Projects</div>
+                <div className="text-2xl font-bold gradient-text">Global</div>
+                <div className="text-xs text-muted-foreground">
+                  Market Strategy
+                </div>
               </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      {/* <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-primary rounded-full flex justify-center items-start glow-primary"
-        >
-          <motion.div
-            animate={{ y: [0, 12, 0] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="w-1 h-3 bg-primary rounded-full mt-2"
-          />
-        </motion.div>
-      </motion.div> */}
       <ScrollIndicator />
     </section>
   );
