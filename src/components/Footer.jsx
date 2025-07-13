@@ -7,7 +7,6 @@ const socialLinks = [
   { icon: Github, href: "/under-construction", label: "GitHub" },
   { icon: Twitter, href: "/under-construction", label: "Twitter" },
   { icon: Linkedin, href: "/under-construction", label: "LinkedIn" },
-  // Only the mail icon is a real mailto link:
   { icon: Mail, href: "mailto:contact@bluverseinfobit.com", label: "Email" },
 ];
 
@@ -65,7 +64,6 @@ export default function Footer() {
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
-                // For the mail, use a real anchor. For others, use Link.
                 return social.label === "Email" ? (
                   <motion.a
                     key={social.label}

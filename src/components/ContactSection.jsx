@@ -76,7 +76,7 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) return; // do not submit if invalid
+    if (!validate()) return;
 
     setIsSubmitting(true);
 
@@ -87,7 +87,7 @@ export default function ContactSection() {
         body: JSON.stringify({
           fullName: formData.name,
           email: formData.email,
-          mobile: formData.company, // adapt if you want company as company
+          mobile: formData.company,
           message: formData.message,
         }),
       });

@@ -76,7 +76,6 @@ export default function HeroSection() {
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
-              {/* You can add back "Watch Demo" here if needed */}
             </motion.div>
 
             {/* Feature Icons */}

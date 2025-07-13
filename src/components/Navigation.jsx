@@ -47,7 +47,7 @@ export default function Navigation() {
               <img
                 src="/assets/logo-wbg.png"
                 alt="Bluverse Logo"
-                className="h-10 w-10 object-contain" // adjust h-10/w-10 as needed
+                className="h-10 w-10 object-contain"
               />
               <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 text-transparent bg-clip-text cursor-pointer">
                 Bluverse Infobit
