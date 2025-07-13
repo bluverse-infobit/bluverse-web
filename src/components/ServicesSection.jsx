@@ -7,7 +7,7 @@ import {
   CardContent,
   CardTitle,
   CardDescription,
-} from "@/components/ui/card";
+} from "@/components/ui/Card";
 
 const services = [
   {

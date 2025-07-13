@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Globe2, Users } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/Button";
 import { ScrollIndicator } from "./ScrollIndicator";
 import { TechLoader } from "./TechLoader";
 
@@ -55,10 +55,10 @@ export default function HeroSection() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-xl text-muted-foreground leading-relaxed max-w-lg"
             >
-              Transform your business through cyber-resilient strategy, UK & Global
-              market expertise, and scalable SaaS & BPO. We embed security at
-              every layer, delivering operational resilience and measurable
-              growth in a digitally connected world.
+              Transform your business through cyber-resilient strategy, UK &
+              Global market expertise, and scalable SaaS & BPO. We embed
+              security at every layer, delivering operational resilience and
+              measurable growth in a digitally connected world.
             </motion.p>
 
             <motion.div

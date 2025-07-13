@@ -10,7 +10,7 @@ export async function POST(request) {
     if (!fullName || !email || !message) {
       return NextResponse.json(
         { success: false, message: "Name, email, and message are required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -49,7 +49,7 @@ export async function POST(request) {
     console.error("Error sending email:", error);
     return NextResponse.json(
       { success: false, message: "Failed to send message." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
