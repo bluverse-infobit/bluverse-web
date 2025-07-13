@@ -20,8 +20,8 @@ const contactInfo = [
     icon: Phone,
     title: "Call Us",
     description: "Speak with our experts",
-    value: "+91-9600896897",
-    action: "tel:+919600896897",
+    value: "+91-7397562321",
+    action: "tel:+917397562321",
   },
   {
     icon: MapPin,
