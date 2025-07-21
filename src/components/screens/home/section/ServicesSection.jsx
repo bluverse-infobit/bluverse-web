@@ -8,10 +8,12 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/Card";
+import { useRouter } from "next/navigation";
 
 const services = [
   {
     title: "UK Outbound Sales Strategy",
+    link: "/uk-sales",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -35,6 +37,7 @@ const services = [
   },
   {
     title: "Cybersecurity Consulting & IT Services",
+    link: "/cybersecurity",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -57,6 +60,7 @@ const services = [
   },
   {
     title: "Managed Security Services (MSSP)",
+    link: "/mssp",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -80,6 +84,7 @@ const services = [
   },
   {
     title: "Cybersecurity Training & Awareness",
+    link: "/cyber-awareness",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -103,6 +108,7 @@ const services = [
   },
   {
     title: "SaaS Security Solutions Reselling",
+    link: "/saas-reselling",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -126,6 +132,7 @@ const services = [
   },
   {
     title: "BPO & Outsourcing",
+    link: "/under-construction",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -151,6 +158,7 @@ const services = [
   },
   {
     title: "Web, App & Custom Software Development",
+    link: "/software-development",
     icon: (
       <svg
         className="w-full h-full text-white"
@@ -175,6 +183,8 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const router = useRouter(); // ✅ moved inside component
+
   return (
     <section id="services" className="py-20 relative">
       <div className="container mx-auto px-4">
@@ -193,11 +203,13 @@ export default function ServicesSection() {
             custom digital development.
           </p>
         </motion.div>
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, idx) => (
             <motion.div
-              className="group"
               key={service.title}
+              className="group cursor-pointer"
+              onClick={() => service.link && router.push(service.link)} // ✅ navigate if link exists
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1, duration: 0.6 }}

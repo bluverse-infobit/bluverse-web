@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const navItems = [
-  { name: "Services", href: "#services" },
-  { name: "Solutions", href: "/under-construction" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/services" },
+  { name: "Solutions", href: "/solutions" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export default function Navigation() {

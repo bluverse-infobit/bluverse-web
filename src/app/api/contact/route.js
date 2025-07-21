@@ -6,7 +6,6 @@ export async function POST(request) {
     const body = await request.json();
     const { fullName, email, mobile, message } = body;
 
-    // Validate required fields (you could do more robust validation if you want)
     if (!fullName || !email || !message) {
       return NextResponse.json(
         { success: false, message: "Name, email, and message are required." },
@@ -14,7 +13,6 @@ export async function POST(request) {
       );
     }
 
-    // Compose email content
     const emailContent = `
       <h3>Contact Form Submission</h3>
       <p><strong>Full Name:</strong> ${fullName}</p>
@@ -23,7 +21,6 @@ export async function POST(request) {
       <p><strong>Message:</strong> ${message}</p>
     `;
 
-    // Nodemailer transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -32,13 +29,11 @@ export async function POST(request) {
       },
     });
 
-    // Send email to multiple recipients
     await transporter.sendMail({
       from: process.env.EMAIL_USER,
       to: [
         "admin@bluverseinfobit.com",
         "deepak@bluverseinfobit.com",
-        // Add more emails if you need
       ],
       subject: "Contact Form Submission",
       html: emailContent,
@@ -54,7 +49,6 @@ export async function POST(request) {
   }
 }
 
-// Optionally support other methods:
 export function GET() {
   return NextResponse.json({ message: "Method Not Allowed" }, { status: 405 });
 }

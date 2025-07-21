@@ -4,26 +4,35 @@ import { Github, Twitter, Linkedin, Mail, ArrowUp } from "lucide-react";
 import Link from "next/link";
 
 const socialLinks = [
-  { icon: Github, href: "/under-construction", label: "GitHub" },
-  { icon: Twitter, href: "/under-construction", label: "Twitter" },
-  { icon: Linkedin, href: "/under-construction", label: "LinkedIn" },
+  // { icon: Github, href: "/under-construction", label: "GitHub" },
+  // { icon: Twitter, href: "/under-construction", label: "Twitter" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/bluverse-infobit",
+    label: "LinkedIn",
+  },
   { icon: Mail, href: "mailto:contact@bluverseinfobit.com", label: "Email" },
 ];
 
 const footerLinks = {
   Services: [
-    "Cloud Solutions",
-    "Custom Development",
-    "Cybersecurity",
-    "Mobile Apps",
+    { label: "Cloud Solutions", href: "/under-construction" },
+    { label: "Custom Development", href: "/under-construction" },
+    { label: "Cybersecurity", href: "/under-construction" },
+    { label: "Mobile Apps", href: "/under-construction" },
   ],
   Company: [
-    { label: "About Us", href: "#about" },
+    { label: "About Us", href: "/about" },
     { label: "Careers", href: "/under-construction" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
     { label: "Blog", href: "/under-construction" },
   ],
-  Resources: ["Documentation", "Support", "Privacy Policy", "Terms of Service"],
+  Resources: [
+    { label: "Documentation", href: "/under-construction" },
+    { label: "Support", href: "/under-construction" },
+    { label: "Privacy Policy", href: "/under-construction" },
+    { label: "Terms of Service", href: "/under-construction" },
+  ],
 };
 
 export default function Footer() {

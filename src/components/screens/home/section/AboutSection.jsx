@@ -10,6 +10,7 @@ import {
   Handshake,
   CheckCircle,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const stats = [
   { icon: Users, number: "150+", label: "Team Members" },
@@ -83,6 +84,7 @@ const stories = [
 ];
 
 export default function AboutSection() {
+  const router = useRouter();
   return (
     <section
       id="about"
@@ -172,15 +174,21 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-6">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
+                const isTeamCard = stat.label === "Team Members";
                 return (
                   <motion.div
                     key={stat.label}
+                    onClick={() => {
+                      if (isTeamCard) router.push("team-members"); // or "/team" if that's a separate route
+                    }}
+                    className={`bg-about-card p-6 rounded-2xl text-center transition-all duration-300 glow-hover card-outline cursor-pointer ${
+                      isTeamCard ? "hover:scale-105" : ""
+                    }`}
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.6 }}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-about-card p-6 rounded-2xl text-center transition-all duration-300 glow-hover card-outline"
                   >
                     <motion.div
                       initial={{ rotate: 0 }}
