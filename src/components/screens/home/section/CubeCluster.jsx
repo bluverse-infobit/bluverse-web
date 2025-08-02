@@ -3,8 +3,8 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { RoundedBox, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 
-const CUBE_COUNT = 80;
-const CUBE_SIZE = 0.85;
+const CUBE_COUNT = 120;
+const CUBE_SIZE = 0.9;
 const CENTER_CUBE_SIZE = 1.8;
 const RADIUS = 3.9; // Make this larger for full-coverage in the parent
 

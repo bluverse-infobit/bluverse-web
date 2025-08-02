@@ -6,6 +6,7 @@ import { ArrowRight, ShieldCheck, Globe2, Users } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ScrollIndicator } from "./ScrollIndicator";
 import CubeCluster from "./CubeCluster";
+import { TypewriterHeading } from "./TypewriterHeading";
 
 const features = [
   { icon: ShieldCheck, text: "24x7 Cyber Defence" },
@@ -40,13 +41,18 @@ export default function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-                <span className="gradient-text">Secure</span>
-                <br />
-                Digital Excellence
-                <br />
-                <span className="text-accent">by Bluverse</span>
-              </h1>
+              {/* Typewriter heading here */}
+              <TypewriterHeading
+                prefix=""
+                suffix="by Bluverse"
+                words={[
+                  "Secure Digital Excellence",
+                  "Cyber Resilience Delivered",
+                  "Trusted UK Market Experts",
+                  "Smart AI Protection",
+                  "Global SaaS Enablement",
+                ]}
+              />
             </motion.div>
 
             <motion.p
@@ -79,7 +85,7 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Feature Icons */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
@@ -100,7 +106,7 @@ export default function HeroSection() {
                   </motion.div>
                 );
               })}
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right Content - Interactive 3D Scene */}
@@ -117,13 +123,13 @@ export default function HeroSection() {
               {/* Floating Stats */}
               <motion.div className="absolute top-4 right-4 glass px-4 py-2 rounded-lg">
                 <div className="text-2xl font-bold gradient-text">24x7</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-slate-500 dark:text-slate-500">
                   Cyber Protection
                 </div>
               </motion.div>
               <motion.div className="absolute bottom-4 left-4 glass px-4 py-2 rounded-lg">
                 <div className="text-2xl font-bold gradient-text">Global</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="text-xs text-slate-500 dark:text-slate-500">
                   Market Strategy
                 </div>
               </motion.div>
