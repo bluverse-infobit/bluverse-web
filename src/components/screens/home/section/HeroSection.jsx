@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Globe2, Users } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { ScrollIndicator } from "./ScrollIndicator";
-import { TechLoader } from "./TechLoader";
+import CubeCluster from "./CubeCluster";
 
 const features = [
   { icon: ShieldCheck, text: "24x7 Cyber Defence" },
@@ -111,9 +111,8 @@ export default function HeroSection() {
             className="relative"
           >
             <div className="relative h-96 lg:h-[500px] glass rounded-2xl overflow-hidden glow-primary">
-              {/* 3D Scene / Loader */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
-                <TechLoader />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20">
+                <CubeCluster />
               </div>
               {/* Floating Stats */}
               <motion.div className="absolute top-4 right-4 glass px-4 py-2 rounded-lg">
