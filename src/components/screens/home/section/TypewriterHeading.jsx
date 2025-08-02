@@ -14,7 +14,8 @@ export function TypewriterHeading({
   words = WORDS,
   loop = true,
   speed = 55,
-  pause = 1000, 
+  pause = 1000,
+  className = "",
 }) {
   const [displayed, setDisplayed] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
@@ -46,7 +47,11 @@ export function TypewriterHeading({
   }, [letterIndex, deleting, wordIndex, words, speed, pause]);
 
   return (
-    <h1 className="text-5xl md:text-7xl font-bold leading-tight relative min-h-[7.5rem]">
+    <h1
+      className={`font-bold leading-tight relative min-h-[4.5rem] sm:min-h-[6.5rem] ${className}`}
+      aria-live="polite"
+      aria-atomic="true"
+    >
       {prefix && <span className="gradient-text">{prefix}</span>}
       {prefix && <br />}
       {/* Reserve space using the longest phrase + "_" */}
@@ -57,8 +62,8 @@ export function TypewriterHeading({
       >
         {longest + "_"}
       </span>
-      {/* The actual typewriter phrase with _ always after */}
-      <span className="gradient-text absolute left-0 top-0">
+      {/* The actual typewriter phrase */}
+      <span className="gradient-text absolute left-0 top-0 w-full">
         {displayed || "\u00A0"}
         <span
           className="text-accent"

@@ -6,7 +6,7 @@ import * as THREE from "three";
 const CUBE_COUNT = 120;
 const CUBE_SIZE = 0.9;
 const CENTER_CUBE_SIZE = 1.8;
-const RADIUS = 3.9; 
+const RADIUS = 3.9;
 
 function getScatteredCubes(count = CUBE_COUNT, radius = RADIUS) {
   const cubes = [];
@@ -42,7 +42,7 @@ function ScatteredCubes() {
       groupRef.current.rotation.z += 0.004;
     }
   });
-  
+
   const xVals = cubes.map((cube) => cube.position[0]);
   const minX = Math.min(...xVals);
   const maxX = Math.max(...xVals);
@@ -114,13 +114,11 @@ function ScatteredCubes() {
 
 export default function CubeCluster() {
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 w-full h-full rounded-2xl overflow-hidden">
       <Canvas
         camera={{ position: [0, 0, 13], fov: 55, near: 0.1, far: 100 }}
+        className="w-full h-full rounded-2xl !bg-transparent"
         style={{
-          height: "100%",
-          width: "100%",
-          borderRadius: "1.5rem",
           background: "radial-gradient(circle, #e3f6fd 60%, #cce8fa 100%)",
         }}
         shadows
