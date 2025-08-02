@@ -83,30 +83,6 @@ export default function HeroSection() {
                 </Button>
               </Link>
             </motion.div>
-
-            {/* Feature Icons */}
-            {/* <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8, duration: 0.8 }}
-              className="flex flex-wrap gap-6 pt-8"
-            >
-              {features.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={feature.text}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: 1 + index * 0.1, duration: 0.5 }}
-                    className="flex items-center space-x-3 glass px-4 py-2 rounded-full"
-                  >
-                    <IconComponent className="h-5 w-5 text-primary" />
-                    <span className="text-sm font-medium">{feature.text}</span>
-                  </motion.div>
-                );
-              })}
-            </motion.div> */}
           </motion.div>
 
           {/* Right Content - Interactive 3D Scene */}

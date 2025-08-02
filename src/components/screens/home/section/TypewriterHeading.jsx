@@ -14,14 +14,13 @@ export function TypewriterHeading({
   words = WORDS,
   loop = true,
   speed = 55,
-  pause = 1000, // 1 second pause after the word is complete
+  pause = 1000, 
 }) {
   const [displayed, setDisplayed] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [letterIndex, setLetterIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
 
-  // Find the longest phrase for layout sizing
   const longest = React.useMemo(
     () => words.reduce((a, b) => (a.length > b.length ? a : b), ""),
     [words]
@@ -35,7 +34,6 @@ export function TypewriterHeading({
       timer = setTimeout(() => setLetterIndex((l) => l + 1), speed);
       setDisplayed(current.slice(0, letterIndex + 1));
     } else if (!deleting && letterIndex === current.length) {
-      // Wait with the full word and cursor for "pause" ms before deleting
       timer = setTimeout(() => setDeleting(true), pause);
     } else if (deleting && letterIndex > 0) {
       timer = setTimeout(() => setLetterIndex((l) => l - 1), speed / 2);

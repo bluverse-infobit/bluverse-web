@@ -6,7 +6,7 @@ import * as THREE from "three";
 const CUBE_COUNT = 120;
 const CUBE_SIZE = 0.9;
 const CENTER_CUBE_SIZE = 1.8;
-const RADIUS = 3.9; // Make this larger for full-coverage in the parent
+const RADIUS = 3.9; 
 
 function getScatteredCubes(count = CUBE_COUNT, radius = RADIUS) {
   const cubes = [];
@@ -42,8 +42,7 @@ function ScatteredCubes() {
       groupRef.current.rotation.z += 0.004;
     }
   });
-
-  // Find min/max X for gradient
+  
   const xVals = cubes.map((cube) => cube.position[0]);
   const minX = Math.min(...xVals);
   const maxX = Math.max(...xVals);
