@@ -262,7 +262,7 @@ export default function CyberAwarenessPage() {
         </button>
         <p className="mt-4 text-muted-foreground text-sm">
           📧 contact@bluverseinfobit.com <br />
-          📞 +91-9600896897
+          📞 +91-7397562321
         </p>
       </motion.div>
     </motion.main>

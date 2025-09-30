@@ -181,14 +181,11 @@ export default function MSSPPage() {
         </div>
         <p className="mt-4 text-muted-foreground text-sm">
           📧{" "}
-          <a
-            className="underline"
-            href="mailto:contact@bluverseinfobit.com"
-          >
+          <a className="underline" href="mailto:contact@bluverseinfobit.com">
             contact@bluverseinfobit.com
           </a>
           <br />
-          📞 +91-9600896897
+          📞 +91-7397562321
         </p>
       </motion.div>
     </motion.main>
