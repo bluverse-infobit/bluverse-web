@@ -193,7 +193,7 @@ export default function SoftwareDevelopmentPage() {
           </div>
           <p className="mt-4 text-muted-foreground text-sm">
             📧 contact@bluverseinfobit.com <br />
-            📞 +91-9600898697
+            📞 +91-7397562321
           </p>
         </motion.div>
       </section>
